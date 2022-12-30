@@ -1,11 +1,20 @@
 
---Criação de uma tabela no banco de dados 
-create table Produtos (
-	ID int identity(1,1) primary key not null, --primary key > chave primaria 
-	Nome varchar(255)not null, 
-	Cor varchar(255) null,
-	Preco decimal(13, 2) not null, 
-	Tamanho varchar(5) null,
-	Genero char(1) null
-)
+select * from Produtos --Count -> serve como contador de linhas 
 
+alter table Produtos --Altera a coluna da tabela
+add DataCadastro datetime2 -- add uma coluna chamada Datacadastro
+
+--alter table produtos 
+--drop column DataCadastro -- remove uma coluna  
+
+update  Produtos set DataCadastro = GETDATE()
+
+
+
+--select sum(Preco) PrecoTotal from Produtos -- o SUM soma uma coluna na tabela 
+
+--select min(preco) PrecoMenor from Produtos --MIN menor preco da tabela 
+
+--select max(preco) PrecoMaior from Produtos -- MAX maior preco da tabela 
+
+--select avg(preco)  from Produtos
