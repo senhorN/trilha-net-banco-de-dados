@@ -17,4 +17,4 @@ select min(preco) PrecoMenor from Produtos --MIN menor preco da tabela
 
 select max(preco) PrecoMaior from Produtos -- MAX maior preco da tabela 
 
-select avg(preco)  from Produtos
+select avg(preco)  from Produtos -- resulta a média do preco na tabela
